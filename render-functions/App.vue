@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <button @click.prevent="toggleHandler">Toggle Modal</button>
-    <modal-create-element :show="show" message="Hello World"></modal-create-element>
+    <modal-create-element :show="show">
+      <h1>Modal title</h1>
+      <p>Hello World</p>
+    </modal-create-element>
   </div>
 </template>
 
