@@ -32,23 +32,37 @@
     </main>
     <footer-partial></footer-partial>
     <!-- Modals -->
-    <modal :show="true">
+    <modal :show="modals.login" @close-modal="closeModal">
       <h1>Modal Title</h1>
     </modal>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import HeaderPartial from '@/partials/HeaderPartial.vue';
 import FooterPartial from '@/partials/FooterPartial.vue';
 import Modal from '@/components/Modal.vue';
 
 export default {
   name: 'DefaultLayout',
+  computed: {
+    ...mapGetters([
+      'modals',
+    ]),
+  },
   components: {
     HeaderPartial,
     FooterPartial,
     Modal,
+  },
+  methods: {
+    closeModal () {
+      this.$store.dispatch('TOGGLE_MODAL_STATE', {
+        name: 'login',
+        value: false,
+      });
+    },
   },
 };
 </script>
