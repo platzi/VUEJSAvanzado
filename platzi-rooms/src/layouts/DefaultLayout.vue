@@ -33,7 +33,26 @@
     <footer-partial></footer-partial>
     <!-- Modals -->
     <modal :show="modals.login" @close-modal="closeModal">
-      <h1>Modal Title</h1>
+      <h2 class="text-grey-darkest font-semibold text-center mb-6">
+        Welcome to Platzi Rooms
+      </h2>
+      <form>
+        <div class="mb-4">
+          <label class="input__label">Email</label>
+          <div class="form__field relative">
+            <input class="input__field" type="text" placeholder="bruce.wayne@imnotbatman.org">
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="input__label">Password</label>
+          <div class="form__field relative">
+            <input class="input__field" type="password" placeholder="*********">
+          </div>
+        </div>
+        <div class="mb-4">
+          <button class="btn btn-primary mr-3 w-full">Login</button>
+        </div>
+      </form>
     </modal>
   </div>
 </template>
