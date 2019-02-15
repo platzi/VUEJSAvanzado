@@ -20,18 +20,18 @@
         <form>
           <div class="mb-4">
             <label class="input__label">Title</label>
-            <input class="input__field" type="text" placeholder="Bruce Wayne">
+            <input v-model="publication.title" class="input__field" type="text" placeholder="Bruce Wayne">
           </div>
           <div class="mb-4">
             <label class="input__label">Description</label>
-            <textarea class="input__field" rows="10" placeholder="Bruce Wayne"></textarea>
+            <textarea v-model="publication.description" class="input__field" rows="10" placeholder="Bruce Wayne"></textarea>
           </div>
           <div class="mb-4">
             <label class="input__label">Featured Image</label>
-            <input class="input__field" type="text" placeholder="https://images.unsplash.com/photo-1432303492674-642e9d0944b">
+            <input v-model="publication.featuredImage" class="input__field" type="text" placeholder="https://images.unsplash.com/photo-1432303492674-642e9d0944b">
           </div>
           <div class="mb-4 text-right">
-            <button class="w-full bg-yellow-dark text-yellow-darker font-semibold py-3 px-6 rounded">
+            <button @click.prevent="save" class="w-full bg-yellow-dark text-yellow-darker font-semibold py-3 px-6 rounded">
               Publish
             </button>
           </div>
@@ -46,7 +46,29 @@ import PageLayout from '@/layouts/PageLayout.vue';
 
 export default {
   name: 'CreateHousePage',
-  component: {
+  data() {
+    return {
+      publication: {
+        title: '',
+        description: '',
+        featuredImage: '',
+      },
+    };
+  },
+  methods:{
+    save() {
+      const { title, description, featuredImage } = this.publication;
+      const room = {
+        title,
+        description,
+        feature_image: featuredImage,
+        publishedAt: Date.now(),
+      }
+
+      this.$store.dispatch('CREATE_ROOM', room);
+    },
+  },
+  components: {
     PageLayout,
   },
 };
