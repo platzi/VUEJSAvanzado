@@ -61,11 +61,13 @@ export default {
       const room = {
         title,
         description,
-        feature_image: featuredImage,
+        featured_image: featuredImage,
         publishedAt: Date.now(),
       }
 
-      this.$store.dispatch('CREATE_ROOM', room);
+      this.$store.dispatch('CREATE_ROOM', room).then(() => {
+        this.$router.push({ name: 'SearchPage' });
+      });
     },
   },
   components: {
