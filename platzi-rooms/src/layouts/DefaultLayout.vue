@@ -59,7 +59,7 @@
       </form>
     </modal>
     <modal :show="modals.register" @close-modal="closeModalRegister">
-      <form class="form">
+      <form class="form" @submit.prevent="registerHandlerSubmit">
         <div class="mb-4">
           <label class="input__label" for="email">Email</label>
           <div class="form__field relative">
@@ -147,7 +147,13 @@ export default {
         name: 'register',
         value: false,
       });
-    }
+    },
+    registerHandlerSubmit() {
+      this.$store.dispatch('CREATE_USER', this.formRegister)
+        .then(() => {
+          this.closeModalRegister();
+        });
+    },
   },
 };
 </script>

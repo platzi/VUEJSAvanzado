@@ -10,7 +10,7 @@ export default new Vuex.Store({
     users: {},
     services: {},
     rooms: {},
-    authId: '38St7Q8Zi2N1SPa5ahzssq9kbyp1',
+    authId: null,
     modals: {
       login: false,
       register: false,
@@ -70,6 +70,18 @@ export default new Vuex.Store({
       firebase.database().ref('users').child(id).once('value', (snapshot) => {
         commit('SET_ITEM', { resource: 'users', id: snapshot.key, item: snapshot.val() });
         resolve(state.users[id]);
+      });
+    }),
+    CREATE_USER: ({ state, commit }, { email, name, password }) => new Promise((resolve) => {
+      firebase.auth().createUserWithEmailAndPassword(email, password).then((account) => {
+        const id = account.user.uid;
+        const registeredAt = Math.floor(Date.now() / 1000);
+        const newUser = { email, name, registeredAt };
+        firebase.database().ref('users').child(id).set(newUser)
+          .then(() => {
+            commit('SET_ITEM', { resource: 'users', id, item: newUser });
+            resolve(state.users[id]);
+          });
       });
     }),
   },
