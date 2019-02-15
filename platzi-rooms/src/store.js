@@ -13,6 +13,7 @@ export default new Vuex.Store({
     authId: '38St7Q8Zi2N1SPa5ahzssq9kbyp1',
     modals: {
       login: false,
+      register: false,
     },
   },
   mutations: {
