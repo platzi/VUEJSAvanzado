@@ -2,38 +2,31 @@
   "services": {
     "-KpR7vRkiRPpbUd_TVAR": {
       "slug": "wifi",
-      "name": "Wi-Fi",
-      ".key": "-KpR7vRkiRPpbUd_TVAR"
+      "name": "Wi-Fi"
     },
     "-KsjPKA6hDuHlQK_lJWO": {
       "slug": "kitchen",
-      "name": "Kitchen",
-      ".key": "-KsjPKA6hDuHlQK_lJWO"
+      "name": "Kitchen"
     },
     "-KvclpNRjpI5W-j0JQGU": {
       "slug": "washer",
-      "name": "Washer",
-      ".key": "-KvclpNRjpI5W-j0JQGU"
+      "name": "Washer"
     },
     "-KpOx5Y4AqRr3sB4Ybwj": {
       "slug": "tv",
-      "name": "TV",
-      ".key": "-KpOx5Y4AqRr3sB4Ybwj"
+      "name": "TV"
     },
     "-KsjO4_W3W9Q2Z2UmuPr": {
       "slug": "free-parking",
-      "name": "Free Parking",
-      ".key": "-KsjO4_W3W9Q2Z2UmuPr"
+      "name": "Free Parking"
     },
     "-KsjPat5MWCx-dkjNVg8": {
       "slug": "laptop-workplace",
-      "name": "Laptop Workspace",
-      ".key": "-KsjPat5MWCx-dkjNVg8"
+      "name": "Laptop Workspace"
     },
     "-KsjPjasLh0TFtZmffEo": {
       "slug": "air-conditioning",
-      "name": "Air Conditioning",
-      ".key": "-KsjPjasLh0TFtZmffEo"
+      "name": "Air Conditioning"
     }
   },
   "rooms": {
@@ -57,8 +50,7 @@
         "-KsjPKA6hDuHlQK_lJWO": "-KsjPKA6hDuHlQK_lJWO",
         "-KvclpNRjpI5W-j0JQGU": "-KvclpNRjpI5W-j0JQGU"
       },
-      "userId": "38St7Q8Zi2N1SPa5ahzssq9kbyp1",
-      ".key": "-KsjWehQ--apjDBwSBCZ"
+      "userId": "38St7Q8Zi2N1SPa5ahzssq9kbyp1"
     },
     "-KvgOAeYDKON22qBjHWQ": {
       "featured_image": "https://images.unsplash.com/photo-1432303492674-642e9d0944b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80",
@@ -80,8 +72,7 @@
         "-KsjPKA6hDuHlQK_lJWO": "-KsjPKA6hDuHlQK_lJWO",
         "-KvclpNRjpI5W-j0JQGU": "-KvclpNRjpI5W-j0JQGU"
       },
-      "userId": "38St7Q8Zi2N1SPa5ahzssq9kbyp1",
-      ".key": "-KvgOAeYDKON22qBjHWQ"
+      "userId": "38St7Q8Zi2N1SPa5ahzssq9kbyp1"
     },
     "-KxxSnNltjgIvlwAjmW9": {
       "featured_image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
@@ -103,8 +94,7 @@
         "-KsjPKA6hDuHlQK_lJWO": "-KsjPKA6hDuHlQK_lJWO",
         "-KvclpNRjpI5W-j0JQGU": "-KvclpNRjpI5W-j0JQGU"
       },
-      "userId": "38St7Q8Zi2N1SPa5ahzssq9kbyp1",
-      ".key": "-KxxSnNltjgIvlwAjmW9"
+      "userId": "38St7Q8Zi2N1SPa5ahzssq9kbyp1"
     }
   },
   "users": {
@@ -116,7 +106,6 @@
       "username": "coderdiaz",
       "lastVisitAt": 1549380938650,
       "registeredAt": 1549380938650,
-      ".key": "38St7Q8Zi2N1SPa5ahzssq9kbyp1",
       "rooms": {
         "-KsjWehQ--apjDBwSBCZ": "-KsjWehQ--apjDBwSBCZ"
       }
